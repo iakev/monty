@@ -46,12 +46,22 @@ int verify(char *string)
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	int n = -1;
+	int n = -1, i = 0;
 
-	if ((verify(argv[1]) == 1))
-		push_error(line_number);
-	n = atoi(argv[1]);
-	add_dnodeint(stack, n);
+	printf("inside push before segfault\n");
+	while (argv[i])
+	{
+		i++;
+	}
+	if (i > 1)
+	{
+		if (i != 2 || (verify(argv[1]) == 1))
+			push_error(line_number);
+		n = atoi(argv[1]);
+		add_dnodeint(stack, n);
+
+	}
+	push_error(line_number);
 }
 /**
  * pall- execute the pall instruction opcode
