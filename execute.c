@@ -24,6 +24,11 @@ int verify(char *string)
 
 	while (x < len)
 	{
+		if (x == 0 && string[x] == '-')
+		{
+			++x;
+			continue;
+		}
 		if (!isdigit(*(string + x)))
 			return (1);
 		++x;
@@ -64,12 +69,19 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	if (*stack)
+	int i  = 0;
+
+	while (argv[i])
+	{
+		i++;
+	}
+	if (i == 1)
 	{
 		print_dlistint(*stack);
 	}
 	else
 	{
+		printf("we are in this block since the list is empty\n");
 		opcode_error(line_number, argv[0]);
 	}
 }

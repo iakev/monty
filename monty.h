@@ -40,6 +40,7 @@ void opcode_error(unsigned int line_number, char *);
 char **input_tokenizer(char *str);
 /* memory management */
 void free_argv(char **argv);
+void free_dlistint(stack_t *head);
 /* executing opcodes helper and push and pall functions*/
 void execute_opcode(int line_number, stack_t **, char **);
 /* functions dealing with doubly linked lists */

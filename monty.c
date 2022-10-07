@@ -35,7 +35,7 @@ int main(int ac, char **av)
 	fclose(fp);
 	free(lineptr);
 	free_argv(argv);
-	/* free created linked list here */
+	free_dlistint(head);
 	return (0);
 }
 /**
