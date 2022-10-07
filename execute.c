@@ -46,14 +46,9 @@ int verify(char *string)
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	int i = 0;
 	int n = -1;
 
-	while (argv[i])
-	{
-		i++;
-	}
-	if (i != 2 || (verify(argv[1]) == 1))
+	if ((verify(argv[1]) == 1))
 		push_error(line_number);
 	n = atoi(argv[1]);
 	add_dnodeint(stack, n);
@@ -69,17 +64,10 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	int i  = 0;
+	int i  = -1;
 
-	while (argv[i])
-	{
-		i++;
-	}
-	if (i == 1)
-	{
-		print_dlistint(*stack);
-	}
-	else
+	i = print_dlistint(*stack);
+	if (i == 0)
 	{
 		opcode_error(line_number, argv[0]);
 	}

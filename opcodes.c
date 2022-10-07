@@ -23,16 +23,9 @@ void pint_error(unsigned int line_number)
  */
 void pint(stack_t **stack, unsigned int line_number)
 {
-	int i  = 0, j = -1;
-
-	while (argv[i])
-	{
-		i++;
-	}
-	if (i == 1)
-	{
-		j = print_top(*stack);
-	}
+	int j = -1;
+	
+	j = print_top(*stack);
 	if (j == 0)
 	{
 		pint_error(line_number);
