@@ -46,6 +46,10 @@ void execute_opcode(int line_number, stack_t **, char **);
 /* functions dealing with doubly linked lists */
 size_t print_dlistint(stack_t *h);
 stack_t *add_dnodeint(stack_t **head, const int n);
+size_t print_top(stack_t *h);
 /* string manipulation */
 char *_strdup(char *str);
+/* executing other opcodes */
+void pint_error(unsigned int line_number);
+void pint(stack_t **stack, unsigned int line_number);
 #endif /* MONTY_H */

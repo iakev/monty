@@ -54,3 +54,21 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 
 	return (*head);
 }
+/**
+ * print_top - function that prints the top data only in a doubly linked list
+ *
+ * @h: pointer to the head node
+ * Return: size_t representing number of nodes in list
+ */
+size_t print_top(stack_t *h)
+{
+	size_t i = 0;
+
+	while (i == 0 && h != NULL)
+	{
+		printf("%d\n", h->n);
+		i++;
+		h = h->next;
+	}
+	return (i);
+}

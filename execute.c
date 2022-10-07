@@ -81,7 +81,6 @@ void pall(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		printf("we are in this block since the list is empty\n");
 		opcode_error(line_number, argv[0]);
 	}
 }
@@ -96,9 +95,10 @@ void pall(stack_t **stack, unsigned int line_number)
 void execute_opcode(int line_number, stack_t **head, char **argv)
 {
 	int i = 0;
-	instruction_t opcodes[3] = {
+	instruction_t opcodes[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{"NULL", NULL}
 	};
 
