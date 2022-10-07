@@ -64,10 +64,9 @@ void push(stack_t **stack, unsigned int line_number)
  */
 void pall(stack_t **stack, unsigned int line_number)
 {
-	int i  = -1;
-
+	int i = -1;
 	i = print_dlistint(*stack);
-	if (i == 0)
+	if (i == -1)
 	{
 		opcode_error(line_number, argv[0]);
 	}
@@ -87,6 +86,7 @@ void execute_opcode(int line_number, stack_t **head, char **argv)
 		{"push", push},
 		{"pall", pall},
 		{"pint", pint},
+		{"pop", pop},
 		{"NULL", NULL}
 	};
 

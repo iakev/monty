@@ -72,3 +72,40 @@ size_t print_top(stack_t *h)
 	}
 	return (i);
 }
+/**
+ * delete_dnodeint_at_index - deletes a node at a given position(index)
+ *
+ * @head: address of pointer to the head node
+ * @index: index of list where new node should be added
+ *
+ * Return: 1 on success or -1 on failure
+ */
+int delete_dnodeint_at_index(stack_t **head, unsigned int index)
+{
+	unsigned int i  = 0;
+	stack_t *temp = NULL;
+
+	if (head == NULL || *head == NULL)
+		return (-1);
+	temp = *head;
+	if (index == 0)
+	{
+		*head = temp->next;
+		if (temp->next != NULL)
+			temp->next->prev = NULL;
+		free(temp);
+		return (1);
+	}
+	while (i < index)
+	{
+		if (temp->next == NULL)
+			return (-1);
+		temp = temp->next;
+		i++;
+	}
+	temp->prev->next = temp->next;
+	if (temp->next != NULL)
+		temp->next->prev = temp->prev;
+	free(temp);
+	return (1);
+}
