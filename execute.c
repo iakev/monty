@@ -48,7 +48,6 @@ void push(stack_t **stack, unsigned int line_number)
 {
 	int n = -1, i = 0;
 
-	printf("inside push before segfault\n");
 	while (argv[i])
 	{
 		i++;
@@ -59,7 +58,7 @@ void push(stack_t **stack, unsigned int line_number)
 			push_error(line_number);
 		n = atoi(argv[1]);
 		add_dnodeint(stack, n);
-
+		return;
 	}
 	push_error(line_number);
 }
