@@ -8,7 +8,7 @@
  */
 void push_error(unsigned int line_number)
 {
-	fprintf(stderr, "L%d:usage: push integer\n", line_number);
+	fprintf(stderr, "L%d: usage: push integer\n", line_number);
 	free_argv(argv);
 	exit(EXIT_FAILURE);
 }
