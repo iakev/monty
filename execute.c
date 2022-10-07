@@ -17,19 +17,18 @@ void push_error(unsigned int line_number)
  * @string: string to be verified if lead to interger
  * Return: 0 on success, 1 on failure
  */
-int verify(char * string)
+int verify(char *string)
 {
-    int x = 0;
-    int len = strlen(string);
+	int x = 0;
+	int len = strlen(string);
 
-    while(x < len) {
-           if(!isdigit(*(string+x)))
-           return 1;
-
-           ++x;
-    }
-
-    return 0;
+	while (x < len)
+	{
+		if (!isdigit(*(string + x)))
+			return (1);
+		++x;
+	}
+	return (0);
 }
 /**
  * push- execute push opcode
