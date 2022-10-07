@@ -29,6 +29,10 @@ int main(int ac, char **av)
 		if (line_sz == -1)
 			break;
 		token = strtok(lineptr, "\n");
+		if (token == NULL)
+		{
+			continue;
+		}
 		argv = input_tokenizer(token);
 		execute_opcode(line_count, &head, argv);
 	}

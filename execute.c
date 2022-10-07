@@ -54,7 +54,7 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 	if (i > 1)
 	{
-		if (i != 2 || (verify(argv[1]) == 1))
+		if ((verify(argv[1]) == 1))
 			push_error(line_number);
 		n = atoi(argv[1]);
 		add_dnodeint(stack, n);
