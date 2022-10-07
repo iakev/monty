@@ -65,6 +65,7 @@ void push(stack_t **stack, unsigned int line_number)
 void pall(stack_t **stack, unsigned int line_number)
 {
 	int i = -1;
+
 	i = print_dlistint(*stack);
 	if (i == -1)
 	{
@@ -76,7 +77,7 @@ void pall(stack_t **stack, unsigned int line_number)
  *
  * @line_number: line number being executed
  * @head: address containing the head of the linked list
- *
+ * @argv: global variable containing commands and their arguments
  * Return: Nothing
  */
 void execute_opcode(int line_number, stack_t **head, char **argv)

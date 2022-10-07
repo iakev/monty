@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * pint_error - error handling on invalid push instruction
+ * push_error - error handling on invalid push instruction
  *
  * @line_number: line number where invalid instruction is
  *
