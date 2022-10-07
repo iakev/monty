@@ -48,6 +48,7 @@ size_t print_dlistint(stack_t *h);
 stack_t *add_dnodeint(stack_t **head, const int n);
 size_t print_top(stack_t *h);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+size_t dlistint_len(stack_t *h);
 /* string manipulation */
 char *_strdup(char *str);
 /* executing other opcodes */
@@ -55,4 +56,5 @@ void pint_error(unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop_error(unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 #endif /* MONTY_H */

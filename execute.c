@@ -97,6 +97,7 @@ void execute_opcode(int line_number, stack_t **head, char **argv)
 		{"pall", pall},
 		{"pint", pint},
 		{"pop", pop},
+		{"swap", swap},
 		{"NULL", NULL}
 	};
 

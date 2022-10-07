@@ -109,3 +109,20 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index)
 	free(temp);
 	return (1);
 }
+/**
+ * dlistint_len - function that counts the nodes in a doubly linked list
+ *
+ * @h: pointer to the head node
+ * Return: size_t representing number of nodes in list
+ */
+size_t dlistint_len(stack_t *h)
+{
+	size_t i = 0;
+
+	while (h != NULL)
+	{
+		h = h->next;
+		i++;
+	}
+	return (i);
+}
